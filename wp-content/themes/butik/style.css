@@ -1,3 +1,19 @@
 /*
 Theme Name: Butik
+Author: accomplice
+Description: Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
 */
+
+/* .woocommerce img, .woocommerce-page img {
+  display: none;
+} */
+
+#masthead {
+  display: none;
+}
+
+.page-title {
+  font-family: sans-serif;
+  font-size: 40px;
+}

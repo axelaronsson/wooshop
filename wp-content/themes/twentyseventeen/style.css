@@ -13,3 +13,106 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+#wp-custom-header, .skip-link, .menu-toggle, .dropdown-toggle, .icon-angle-down, .woocommerce-products-header__title,
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.sub-menu {
+  display: none;
+}
+
+#site-navigation > div {
+  position: absolute;
+  right: 0;
+  top: -90px;
+}
+
+#top-menu li {
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+}
+
+a {
+  text-decoration-line: none;
+  color:black;
+}
+
+#top-menu {
+  position: relative;
+}
+
+.navigation-top {
+  display: inline;
+}
+
+.site-description {
+  display: none;
+}
+
+.menu-meny-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.site-branding, .site-branding-text, .wrap, .custom-header {
+  display: inline;
+}
+
+.site-title {
+  font-family: sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  margin: 16px 0px;
+  position: absolute;
+  top: -90px;
+}
+
+#masthead {
+  height: 70vh;
+  margin: 150px 70px;
+  position: relative;
+  background-image: url('https://static.squarespace.com/static/535d1affe4b0ec04b0fa0a81/548d0b6ce4b033414a100e27/548d0b6ce4b033414a100f6e/1353687330537/1000w/20121107_0026-copy.jpg');
+  background-size: cover;
+}
+#top-menu li:first-child:hover .sub-menu {
+  position: absolute;
+  left: 0;
+  display: block;
+}
+
+#top-menu .sub-menu li {
+  display: block;
+}
+
+#masthead nav {
+  /* float: right; */
+}
+
+#content #primary {
+  /* margin: auto; */
+  width: auto;
+  padding: 70px;
+}
+
+#main {
+  width: 100%;
+}
+
+.woocommerce img, .woocommerce-page img {
+  max-height: 250px;
+  height: 25vw;
+  object-fit: cover;
+}
