@@ -116,3 +116,28 @@ a {
   height: 25vw;
   object-fit: cover;
 }
+
+.woocommerce ul.products, .woocommerce-page ul.products {
+  display: flex;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  margin: 0px;
+  width: auto;
+}
+
+.woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
+  width: auto;
+}
+
+#main ul li {
+  flex: 1;
+}
+
+#main ul li:nth-child(4n + 4) {
+  flex: none;
+}
+
+ul {
+  -webkit-padding-start: 0px;
+}
