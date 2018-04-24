@@ -1,14 +1,35 @@
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <style>
-        body {
-            margin: 0px;
-        }
-        #smide-header {
-            height: 50vh;
-            background: lightseagreen;
-        }
-    </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <style>
+      body {
+        margin: 0px;
+      }
+      #smide-header {
+        height: 100vh;
+        background-image: url('../wp-content/themes/storefront/pics/4359.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      #smide-section-one {
+        height: 100vh;
+        background-image: url('../wp-content/themes/storefront/pics/4358.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+      #smide-nav {
+        display: flex;
+        width: 50%;
+        margin-top: 30px;
+        float: right;
+        justify-content: space-around;
+      }
+      #smide-nav li, a {
+        /* display: inline; */
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+      }
+  </style>
 </head>
 <div
 	id="app-5"
@@ -18,8 +39,17 @@
     background: mistyrose;
 	"
     >
-    <div id="smide-header"></div>
+    <div id="smide-header">
+      <div id="smide-nav">
+        <a href="#">Butiken</a>
+        <a href="#">Shop</a>
+        <a href="#">Vigsel</a>
+        <a href="#">Om oss</a>
+      </div>
+    </div>
+    <div id="smide-section-one"></div>
     <p>{{ message }}</p>
+    <!-- <p>{{ theContent }}</p> -->
     <button v-on:click="reverseMessage">Reverse Message</button>
     <p><a href="localhost/wooshop/shop/">shop</a></p>
 </div>
@@ -28,7 +58,8 @@ var app5 = new Vue({
   el: '#app-5',
   data: {
     message: 'Hello Vue.js!',
-	wpdata: "<div id='foo'><a href='#'>Link</a><span></span></div>"
+	  wpdata: "<div id='foo'><a href='#'>Link</a><span></span></div>",
+    pageImg: null
   },
   methods: {
     reverseMessage: function () {
@@ -36,28 +67,26 @@ var app5 = new Vue({
     }
   },
   computed: {
+      theContent: function () {
+        return this.wpdata.content
+    }
   },
   beforeMount: function () {
     var theURL = window.location.href;
     var parts = theURL.split('/');
     var slug = parts[4];
-    var theData = []
-	fetch('http://localhost/wooshop/wp-json/wp/v2/pages/?slug=' + slug)
-	.then(function(response) {
-		return response.json();
-	})
-	.then(function(myJson) {
-		console.log(myJson);
-        theData.push(myJson);
-	});
-    this.wpdata = theData
-    var content = this.wpdata
-    console.log('data', Object.entries(content))
-    // var xmlString = content
-    // var parser = new DOMParser()
-    // var doc = parser.parseFromString(xmlString, "text/xml")
-    // var imgTag = doc.getElementByTagName('img')
-    // console.log(imgTag)
+    var that = this
+    var theData = 'lite data'
+
+    fetch('http://localhost/wooshop/wp-json/wp/v2/pages/?slug=' + slug)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson[0]);
+      that.wpdata = myJson[0];
+      theData = myJson[0]
+    });
   }
 })
 </script>
