@@ -1,0 +1,80 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: April 25, 2018 12:46 pm
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.2.36
+WORDPRESS:	4.9.5
+PHP INFO:	7.2.4 | SAPI: apache2handler
+SERVER:		Apache/2.4.33 (Win32) OpenSSL/1.1.0g PHP/7.2.4 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 2048M (158M default) 
+MEMORY STACK: 22MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported 
+FILTERED: [] 
+RESPONSE: Ran from D:/xampp/mysql/bin/mysqldump.exe 
+TABLES: total:29 | filtered:0 | create:29 
+SQL CREATED: 20180425_wooshop_10554ccb32c078914166180425124555_database.sql 
+SQL FILE SIZE: 393.6KB (403045) 
+SQL FILE TIME: 2018-04-25 12:46:35 
+SQL RUNTIME: 1.86 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  D:/xampp/htdocs/wooshop 
+ARCHIVE FILE: 20180425_wooshop_10554ccb32c078914166180425124555_archive.zip 
+FILTERS: *OFF* 
+DIRS:
+	not set 
+FILES:
+	not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	108.93MB 
+STATS:	Dirs 884 | Files 9,964 
+SQL ADDED: 20180425_wooshop_10554ccb32c078914166180425124555_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 10848
+    [filename] => D:\xampp\htdocs\wooshop\wp-snapshots\tmp\20180425_wooshop_10554ccb32c078914166180425124555_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 70.13MB 
+ARCHIVE RUNTIME: 197.94 sec. 
+MEMORY STACK: 24MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+PACK SIZE:  
+Template parsed with new data 
+Complete [D:/xampp/htdocs/wooshop/wp-snapshots/tmp/20180425_wooshop_10554ccb32c078914166180425124555_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 393.6KB 
+Installer File: 445.86KB 
+Archive File: 70.13MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 211.17 sec.
+PEAK PHP MEMORY USED: 26MB
+DONE PROCESSING => 20180425_wooshop April 25, 2018 12:50 pm
+ 

@@ -48,9 +48,7 @@
       </div>
     </div>
     <div id="smide-section-one"></div>
-    <p>{{ message }}</p>
-    <!-- <p>{{ theContent }}</p> -->
-    <button v-on:click="reverseMessage">Reverse Message</button>
+    <div><img v-bind:src="pageImages[0].attributes.src.value" alt=""></div>
     <p><a href="localhost/wooshop/shop/">shop</a></p>
 </div>
 <script>
@@ -59,34 +57,42 @@ var app5 = new Vue({
   data: {
     message: 'Hello Vue.js!',
 	  wpdata: "<div id='foo'><a href='#'>Link</a><span></span></div>",
-    pageImg: null
+    pageImages: null
   },
   methods: {
     reverseMessage: function () {
       this.message = this.message.split('').reverse().join('')
+    },
+    theImages: function (data) {
+      var parser, xmlDoc
+      var text = data.content.rendered
+      parser = new DOMParser()
+      xmlDoc = parser.parseFromString(text,"text/xml")
+      var elems = xmlDoc.getElementsByTagName('img')
+      this.pageImages = elems
+      console.log('method', elems)
     }
   },
   computed: {
       theContent: function () {
-        return this.wpdata.content
+        return this.wpdata.content.rendered
     }
   },
   beforeMount: function () {
-    var theURL = window.location.href;
-    var parts = theURL.split('/');
-    var slug = parts[4];
+    var theURL = window.location.href
+    var parts = theURL.split('/')
+    var slug = parts[4]
     var that = this
-    var theData = 'lite data'
 
     fetch('http://localhost/wooshop/wp-json/wp/v2/pages/?slug=' + slug)
     .then(function(response) {
-      return response.json();
+      return response.json()
     })
     .then(function(myJson) {
-      console.log(myJson[0]);
-      that.wpdata = myJson[0];
-      theData = myJson[0]
-    });
+      console.log(myJson[0])
+      that.wpdata = myJson[0]
+      that.theImages(myJson[0])
+    })
   }
 })
 </script>
