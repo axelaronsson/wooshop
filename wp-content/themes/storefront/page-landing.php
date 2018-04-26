@@ -29,6 +29,10 @@
         text-decoration: none;
         color: white;
       }
+      #header-img {
+        height: 200px;
+        width: auto;
+      }
   </style>
 </head>
 <div
@@ -49,6 +53,8 @@
     </div>
     <div id="smide-section-one"></div>
     <div><img v-bind:src="pageImages[0].attributes.src.value" alt=""></div>
+    <?php $headerimg = get_field('header_picture'); ?>
+    <img id="header-img" src="<?php echo $headerimg ?>" alt="">
     <p><a href="localhost/wooshop/shop/">shop</a></p>
 </div>
 <script>
