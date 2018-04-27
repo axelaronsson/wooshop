@@ -42,9 +42,12 @@ $imgTwo = get_field('section_two_image');
         float: right;
       }
       #section-one-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         font-family: sans-serif;
         width: 300px;
-        margin-top: 50%;
+        height: 70%;
       }
   </style>
 </head>
