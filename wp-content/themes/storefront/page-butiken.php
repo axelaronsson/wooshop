@@ -49,7 +49,7 @@ var butiken = new Vue({
       return realSize
     },
     shuffleMargin: function () {
-      var nmbr = Math.floor(Math.random() * 40) + 0
+      var nmbr = Math.floor(Math.random() * 50) + 10
       if (nmbr == this.previousNum) {
         nmbr += 1
       }
